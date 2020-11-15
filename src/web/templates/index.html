@@ -2,38 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/mainsheet.css">
     <title>Diabetes prediction</title>
 </head>
 <body>
+{% include "./nav.html" %}
     <h3>Prediction of diabetes development</h3>
-    <div>
-        <form action="/result" method="post">
-            <label for="gestation">Number of gestations</label>
-            <input type="number" min="0" id="gestation" name="gestation">
+    <div id="diabetes-main">
+    <div id="diabetes-div">
+        <form action="/result" id="diabetes-form" method="post">
+            <label for="gestation" class="g-label">Number of gestations</label>
+            <input type="number" min="0" class="diabetes-input" id="gestation" name="gestation">
             <br>
-            <label for="glucose">Glucose concentration</label>
-            <input type="number" min="0" id="glucose" name="glucose">
+            <label for="glucose" class="g-label">Glucose level</label>
+            <input type="number" min="0" class="diabetes-input" id="glucose" name="glucose">
             <br>
-            <label for="diastolic">Diastolic pressure</label>
-            <input type="number" min="0" id="diastolic" name="diastolic"> (mm Hg)
+            <label for="diastolic" class="g-label">Diastolic pressure           (mm Hg)</label>
+            <input type="number" min="0" class="diabetes-input" id="diastolic" name="diastolic">
             <br>
-            <label for="triceps-skinfold">Triceps skinfold thickness</label>
-            <input type="number" min="0" id="triceps-skinfold" name="triceps-skinfold"> (mm)
+            <label for="triceps-skinfold" class="g-label">Triceps skinfold thickness           (mm)</label>
+            <input type="number" min="0" class="diabetes-input" id="triceps-skinfold" name="triceps">
             <br>
-            <label for="insulin-level">Insulin level</label>
-            <input type="number" min="0" id="insulin-level" name="insulin-level"> (mu U/ml)
+            <label for="insulin-level" class="g-label">Insulin level          (mu U/ml)</label>
+            <input type="number" min="0" class="diabetes-input" id="insulin-level" name="insulin">
             <br>
-            <label for="body-mass">Body mass index</label>
-            <input type="number" min="0" step="0.01" id="body-mass" name="body-mass">
+            <label for="body-mass" class="g-label">Body mass index</label>
+            <input type="number" min="0" class="diabetes-input" step="0.01" id="body-mass" name="mass">
             <br>
-            <label for="genetic-heritage">Genetic heritage</label>
-            <input type="number" min="0" step="0.001" id="genetic-heritage" name="genetic-heritage">
+            <label for="genetic-heritage" class="g-label">Genetic heritage</label>
+            <input type="number" min="0" class="diabetes-input" step="0.001" id="genetic-heritage" name="d-input">
             <br>
-            <label for="age">Age</label>
-            <input type="number" min="0"  id="age" name="age"> years old
+            <label for="age" class="g-label">Age          (Years old)</label>
+            <input type="number" min="0" class="diabetes-input" id="age" name="age">
             <br>
             <input type="submit" value="Send">
         </form>
+    </div>
     </div>
 </body>
 </html>

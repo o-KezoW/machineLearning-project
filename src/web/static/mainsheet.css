@@ -1,0 +1,42 @@
+#diabetes-div {
+	display: table;
+	margin: auto;
+	background-color: #9d10e3;
+	border:;
+}
+
+.diabetes-input {
+	width: 100%;
+	clear: both;
+}
+
+input, select, textarea{
+    color: #black;
+}
+
+input {
+	display: inline-block;
+	border-radius: 5px;
+	width: 100px;
+	align-content: flex-end;
+}
+
+input[type=number] {
+	border-radius: 10px
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
+#diabetes-main {
+	justify-content: center
+	width: 10px;
+	background-color: #9d10e3;
+	border: solid;
+	border-radius: 20px;
+}
+
+h3 {
+	text-align: center;
+}
