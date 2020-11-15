@@ -3,7 +3,7 @@ import numpy as np
 import testing.save_model
 # import flask_http_response
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, template_folder="web/templates", static_folder="web/static")
 
 
 def predict_diabetes(filled_form):
