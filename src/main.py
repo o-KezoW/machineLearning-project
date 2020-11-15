@@ -1,7 +1,7 @@
 import flask
 import numpy as np
 import testing.save_model
-import flask_http_response
+# import flask_http_response
 
 app = flask.Flask(__name__)
 
@@ -25,16 +25,19 @@ def app_result():
     if flask.request.method == "POST":
         form = flask.request.form.to_dict()
         form = list(form.values())
+
         # form = list(map(predict_diabetes(form), form))
         # return flask_http_response.result.return_response(form)
+
         result = predict_diabetes(form)
+
         if int(result) == 1:
-            predict = "Probably has diabetes"
+            predict = "You probably have diabetes"
         else:
-            predict = "Probably doesn't have diabetes"
+            predict = "You probably doesn't have diabetes"
 
         # Returns our result to a html page
-        return flask.render_template("result.html", predict=predict)
+        return flask.render_template("result.html", predict=predict, stat=result)
 
 
 if __name__ == "__main__":

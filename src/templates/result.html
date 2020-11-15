@@ -5,6 +5,11 @@
     <title>$Title$</title>
 </head>
 <body>
-$END$
+    <h3>{{ predict }}</h3>
+    {% if stat == 0 %}
+        <div>You should not worry that much :D</div>
+    {% else %}
+        <div>Maybe you should go to the hospital or something ;(</div>
+    {% endif %}
 </body>
 </html>
