@@ -9,28 +9,28 @@
     <div>
         <form action="/result" method="post">
             <label for="gestation">Number of gestations</label>
-            <input type="number" id="gestation" name="gestation">
+            <input type="number" min="0" id="gestation" name="gestation">
             <br>
             <label for="glucose">Glucose concentration</label>
-            <input type="number" id="glucose" name="glucose">
+            <input type="number" min="0" id="glucose" name="glucose">
             <br>
             <label for="diastolic">Diastolic pressure</label>
-            <input type="number" id="diastolic" name="diastolic"> (mm Hg)
+            <input type="number" min="0" id="diastolic" name="diastolic"> (mm Hg)
             <br>
             <label for="triceps-skinfold">Triceps skinfold thickness</label>
-            <input type="number" id="triceps-skinfold" name="triceps-skinfold"> (mm)
+            <input type="number" min="0" id="triceps-skinfold" name="triceps-skinfold"> (mm)
             <br>
             <label for="insulin-level">Insulin level</label>
-            <input type="number" id="insulin-level" name="insulin-level"> (mu U/ml)
+            <input type="number" min="0" id="insulin-level" name="insulin-level"> (mu U/ml)
             <br>
             <label for="body-mass">Body mass index</label>
-            <input type="number" id="body-mass" name="body-mass">
+            <input type="number" min="0" step="0.01" id="body-mass" name="body-mass">
             <br>
             <label for="genetic-heritage">Genetic heritage</label>
-            <input type="number"  id="genetic-heritage" name="genetic-heritage">
+            <input type="number" min="0" step="0.001" id="genetic-heritage" name="genetic-heritage">
             <br>
             <label for="age">Age</label>
-            <input type="number" id="age" name="age"> years old
+            <input type="number" min="0"  id="age" name="age"> years old
             <br>
             <input type="submit" value="Send">
         </form>

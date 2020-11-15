@@ -7,12 +7,12 @@ app = flask.Flask(__name__)
 
 
 def predict_diabetes(filled_form):
-    predict = np.array(filled_form).reshape(1, 8)
-    predict = predict.astype("int32")
+    predict = np.array(filled_form).reshape(1, -1).astype("float64")
     saved_model = testing.save_model.load_file
     result = saved_model.predict(predict)
-    result = result.tolist
-    return result
+    result = result.tolist()
+
+    return result[0]
 
 
 @app.route("/")
@@ -25,12 +25,9 @@ def app_result():
     if flask.request.method == "POST":
         form = flask.request.form.to_dict()
         form = list(form.values())
+        # form = list(map(predict_diabetes(form), form))
         # return flask_http_response.result.return_response(form)
-        for i in form:
-            int(i)
-        form = list(map(predict_diabetes(form), form))
-        result = predict_diabetes(form)  # TODO: Error in this line fix, kthx
-        return flask_http_response.result.return_response(result)
+        result = predict_diabetes(form)
         if int(result) == 1:
             predict = "Probably has diabetes"
         else:
