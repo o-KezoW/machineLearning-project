@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes prediction</title>
+</head>
+<body>
+    <h3>Prediction of diabetes development</h3>
+    <div>
+        <form action="/result" method="post">
+            <label for="gestation">Number of gestations</label>
+            <input type="text" id="gestation" name="gestation">
+            <br>
+            <label for="glucose">Glucose concentration</label>
+            <input type="text" id="glucose" name="glucose">
+            <br>
+            <label for="diastolic">Diastolic pressure</label>
+            <input type="text" id="diastolic" name="diastolic"> (mm Hg)
+            <br>
+            <label for="triceps-skinfold">Triceps skinfold thickness</label>
+            <input type="text" id="triceps-skinfold" name="triceps-skinfold"> (mm)
+            <br>
+            <label for="insulin-level">Insulin level</label>
+            <input type="text" id="insulin-level" name="insulin-level"> (mu U/ml)
+            <br>
+            <label for="body-mass">Body mass index</label>
+            <input type="text" id="body-mass" name="body-mass">
+            <br>
+            <label for="genetic-heritage">Genetic heritage</label>
+            <input type="text"  id="genetic-heritage" name="genetic-heritage">
+            <br>
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age"> years old
+            <br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
